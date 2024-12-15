@@ -5,10 +5,13 @@ function tabuada(){
 
     var nValue = num.value;
     
-    res.innerHTML = `Tabuada do ${nValue}: <br/>`
-
-      while(c <= 10){
-        res.innerHTML += `${nValue} x ${c} = ${nValue * c} <br/>`;
-        c++;
+    if (nValue == ""){
+        res.innerHTML = "É necessário inserir um número para continuar com a tabuada.";
+    }else{
+        res.innerHTML = `Tabuada do ${nValue}: <br/>`
+        while(c <= 10){
+            res.innerHTML += `${nValue} x ${c} = ${nValue * c} <br/>`;
+            c++;
+       }
     }
 }
